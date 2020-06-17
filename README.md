@@ -1,6 +1,5 @@
-===========
 DISCLAIMER:
-===========
+==
 Current BitMat source does not support SELECT clause.
 It outputs ALL the variables -- join as well as non-join --
 from the query. It can make significant difference for the
@@ -13,12 +12,9 @@ Hence please use the code responsibly to run ONLY queries,
 which SELECT _all_ the variables in the query, or contact
 medha.atre@gmail.com for understanding the use of "bushy" flag.
 
-======
-BitMat
-======
-
 COMMON USAGE:
-=============
+==
+
 $ ./bin/bitmat -l [y/n] -Q [y/n] -f configfile -q queryfile -o resultfile
 
 Description:
@@ -29,25 +25,22 @@ Description:
   -q : Queryfile. Should be formed as given in sample
   -o : Path to the results file
 
----------------------------------------------------------------------
-
 COMPILING:
-==========
+==
+
 To compile the sources, follow two simple commands.
 
 $ cd src
 $ make
 
----------------------------------------------------------------------
-
 DATA LOADING:
-=============
+==
 
 Current BitMat code does not have way of parsing the RDF data. We use
 an external script for that purpose.
 
 The way of parsing the data and allocating unique IDs is same as
-described in http://www.cs.rpi.edu/~atrem/papers/www10_medha.pdf in
+described in https://www.dropbox.com/s/vwghqiy30plzf4z/www10_medha.pdf?dl=0 in
 Section 3.
 
 After the ID allocation is done, we transform all the triples into
@@ -74,10 +67,8 @@ file in the "config" folder).
 The BITMATDUMPFILE_SPO, BITMATDUMPFILE_OPS etc specify paths to the 4
 types of BitMats created out of the given RDF data.
 
-----------------------------------------------------------------------
-
 CONFIG FILE:
-============
+==
 
 Some important fields of cofig file:
 
@@ -101,10 +92,8 @@ over 57000 predicates), setting COMPRESS_FOLDED_ARRAY to 1 achieves better
 compression for indexes. Please use this configuration parameter for
 datasets with large predicate values.
 
-----------------------------------------------------------------------
-
 QUERY PROCESSING:
-=================
+==
 
 BitMat interface currently does not support a SPARQL parser. Each join
 query is represented as follows:
@@ -123,10 +112,9 @@ Anytihng beyond a line marked by "###" in the queryfile is ignored and
 hence can be used for comments or to store the original text format
 query.
 
-----------------------------------------------------------------------
 
 OUTPUT FORMAT:
-==============
+==
 
 Since presently BitMat query processing interface does not support
 SELECT clause of SPARQL query, it outputs all the variable bindings
