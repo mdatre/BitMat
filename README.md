@@ -1,5 +1,7 @@
-==================================================================
-DISCLAIMER: Current BitMat source does not support SELECT clause.
+===========
+DISCLAIMER:
+===========
+Current BitMat source does not support SELECT clause.
 It outputs ALL the variables -- join as well as non-join --
 from the query. It can make significant difference for the
 query times where only one variable is getting projected.
@@ -10,7 +12,6 @@ ONE join variable in it, and that variable is SELECTed.
 Hence please use the code responsibly to run ONLY queries,
 which SELECT _all_ the variables in the query, or contact
 medha.atre@gmail.com for understanding the use of "bushy" flag.
-=================================================================
 
 ======
 BitMat
