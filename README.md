@@ -31,6 +31,7 @@ COMPILING:
 To compile the sources, follow two simple commands.
 
 $ cd src
+
 $ make
 
 DATA LOADING:
